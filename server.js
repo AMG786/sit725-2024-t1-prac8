@@ -11,9 +11,9 @@ app.use(express.static(__dirname + '/'));
 app.use(express.json());
 app.use('/api/foodItems', router)
 
-app.listen(3000, (req,res)=>{
+/*app.listen(3000, (req,res)=>{
     console.log("Server is running");
-});
+});*/
 
 io.on('connection', (socket)=> {
     console.log("Client is Connected!!");
@@ -26,6 +26,6 @@ io.on('connection', (socket)=> {
     }, 1000);
 });
 
-http.listen(3001, (req,res)=>{
+http.listen(3000, (req,res)=>{
     console.log("Server is running");
 });
